@@ -31,6 +31,7 @@ public class Main {
 
         }
 		
+        // to accept multiple client
         while (true) {
             try {
                 socket = server.accept();
