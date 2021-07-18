@@ -5,13 +5,14 @@ import java.net.Socket;
 
 public class Main {
 	
-	public static int port = 4000;
+	public static int port;
 	static Thread thread;
 	static FileSeverImplementation fileSeverImplementation = new FileSeverImplementation();
 	private static ServerSocket server;
 	private static Socket socket;
 
 	public static void main(String[] args) {
+		port = Integer.parseInt(args[0]);
 		try {
 			File myObj = new File("filename.txt");
 			if (myObj.createNewFile()) {
